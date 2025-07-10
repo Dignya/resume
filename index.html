@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Resume</title>
+  <style>
+    :root {
+      --bg-color: #e8f0fe;
+      --text-color: #000000;
+      --card-bg: #ffffff;
+      --line-color: #cccccc;
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --card-bg: #1e1e1e;
+      --line-color: #444444;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .resume-box {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: var(--card-bg);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 160px;
+      padding: 8px 14px;
+      background-color: #555;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .profile-photo {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--text-color);
+    }
+
+    h1 {
+      margin-bottom: 5px;
+    }
+
+    p.sub-info {
+      margin-top: 0;
+      color: gray;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--line-color);
+      margin: 25px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .profile-photo {
+        position: static;
+        display: block;
+        margin: 10px auto;
+      }
+      .toggle-btn {
+        right: 20px;
+        top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-box">
+    <!-- Dark Mode Button -->
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+
+    <!-- Profile Photo -->
+    <img src="/Randomgirl.avif" alt="Profile Photo" class="profile-photo" />
+
+    <!-- Header -->
+    <h1>Dignya Kopparapu</h1>
+    <p class="sub-info">Email: dignya@example.com | Location: Bvrm, Andhra Pradesh</p>
+
+    <hr>
+
+    <!-- About Me -->
+    <div class="section">
+      <h2>About Me</h2>
+      <p>I am a passionate developer with a strong interest in building practical applications, machine learning, and user-friendly systems.</p>
+    </div>
+
+    <hr>
+
+    <!-- Skills -->
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python, Java</li>
+        <li>Machine Learning</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <!-- Projects -->
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Portfolio Website</strong> – That has all the details about me </li>
+        <li><strong>Calculator App</strong> – Built with only HTML, CSS, and JavaScript,includes clear/reset and result functions.</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <!-- Certifications -->
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Google Data Analytics Certificate</li>
+        <li>Machine Learning by Stanford (Coursera)</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <!-- Hobbies -->
+    <div class="section">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Photography</li>
+        <li>Reading tech blogs</li>
+        <li>Traveling</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <!-- Contact -->
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Email: dignya@example.com</p>
+      <p>Phone: +91 9876543210</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
